@@ -1,0 +1,18 @@
+{
+    "name": "karrakoliko/carbase-test",
+    "autoload": {
+        "psr-4": {
+            "Karrakoliko\\CarbaseTest\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "karrakoliko",
+            "email": "github-public@karrakoliko.fastmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "symfony/console": "^6.3"
+    }
+}

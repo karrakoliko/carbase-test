@@ -1,0 +1,5 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Show cars" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/index.php" scriptParameters="show">
+    <method v="2" />
+  </configuration>
+</component>
