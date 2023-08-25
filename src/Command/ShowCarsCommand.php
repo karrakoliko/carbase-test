@@ -2,7 +2,6 @@
 
 namespace Karrakoliko\CarbaseTest\Command;
 
-use Karrakoliko\CarbaseTest\Vehicle\Repository\CsvFileVehicleRepository;
 use Karrakoliko\CarbaseTest\Vehicle\Repository\VehicleRepositoryInterface;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
@@ -25,8 +24,8 @@ class ShowCarsCommand extends Command
 
         $vehicles = $this->vehicleRepository->getAll();
 
-        foreach ($vehicles as $vehicle){
-            $output->writeln('* '. $vehicle);
+        foreach ($vehicles as $vehicle) {
+            $output->writeln('* ' . $vehicle);
         }
 
         return self::SUCCESS;

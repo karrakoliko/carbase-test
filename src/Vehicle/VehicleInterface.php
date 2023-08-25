@@ -2,8 +2,12 @@
 
 namespace Karrakoliko\CarbaseTest\Vehicle;
 
-interface VehicleInterface extends \Stringable
+use Stringable;
+
+interface VehicleInterface extends Stringable
 {
+
+    public static function hydrate(array $props): self;
 
     /**
      * @return mixed
@@ -16,6 +20,5 @@ interface VehicleInterface extends \Stringable
      * @return void
      */
     public function setAttribute(string $key, $value): void;
-    public static function hydrate(array $props): self;
 
 }

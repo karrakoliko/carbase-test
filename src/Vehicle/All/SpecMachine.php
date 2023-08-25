@@ -3,7 +3,6 @@
 namespace Karrakoliko\CarbaseTest\Vehicle\All;
 
 use Karrakoliko\CarbaseTest\Vehicle\VehicleAbstract;
-use Karrakoliko\CarbaseTest\Vehicle\VehicleType;
 
 class SpecMachine extends VehicleAbstract
 {

@@ -6,6 +6,7 @@ use Karrakoliko\CarbaseTest\Vehicle\All\Car;
 use Karrakoliko\CarbaseTest\Vehicle\All\SpecMachine;
 use Karrakoliko\CarbaseTest\Vehicle\All\Truck;
 use Karrakoliko\CarbaseTest\Vehicle\VehicleAbstract;
+use RuntimeException;
 
 class CsvFileVehicleRepository implements VehicleRepositoryInterface
 {
@@ -21,7 +22,7 @@ class CsvFileVehicleRepository implements VehicleRepositoryInterface
         try {
 
             if (($fp = fopen($this->path, "r")) === FALSE) {
-                throw new \RuntimeException(sprintf('Unable to open file at %s', $this->path));
+                throw new RuntimeException(sprintf('Unable to open file at %s', $this->path));
             }
 
             $heading = null;
@@ -39,12 +40,12 @@ class CsvFileVehicleRepository implements VehicleRepositoryInterface
 
                 $vehicleTypeName = $row[$typeKeyIndex];
 
-                if(empty($vehicleTypeName)){
+                if (empty($vehicleTypeName)) {
                     continue;
                 }
 
                 if (!is_string($vehicleTypeName) || !array_key_exists($vehicleTypeName, $mapping)) {
-                    throw new \RuntimeException(sprintf('Unknown vehicle type %s', $vehicleTypeName));
+                    throw new RuntimeException(sprintf('Unknown vehicle type %s', $vehicleTypeName));
                 }
 
                 /** @var VehicleAbstract $vehicleClass */
